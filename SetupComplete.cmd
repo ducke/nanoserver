@@ -1,0 +1,2 @@
+REM powershell.exe -command "C:\windows\system32\windowspowershell\v1.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1; Import-Module C:\Windows\System32\WindowsPowerShell\v1.0\Modules\NetTCPIP\NetTCPIP.psd1; Get-NetIPAddress"
+ipconfig /all
