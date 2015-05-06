@@ -3,3 +3,4 @@ mountdir/*
 Packages/*
 Virtual Machines/*
 *.vhd
+*.wim
