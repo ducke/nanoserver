@@ -1,1 +1,3 @@
+netsh advfirewall firewall set rule group="Windows Management Instrumentation (WMI)" new enable=yes
+netsh advfirewall firewall set rule group="remote event log management" new enable=yes
 powershell.exe -command "Import-Module C:\Windows\System32\WindowsPowerShell\v1.0\Modules\NetTCPIP\NetTCPIP.psd1; write-host ('IPAddress: {0}' -f ((Get-NetIPAddress -AddressFamily IPv4 -PrefixOrigin Dhcp).IPAddress))"

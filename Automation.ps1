@@ -11,6 +11,7 @@ param
   $Role,
   [switch]$GuestDrivers,
   [switch]$OEMDrivers,
+  [switch]$ReverseForwarders,
   [ValidateScript({Test-Path $_})]
   [string]$SetupCompleteFile
 )
@@ -102,8 +103,10 @@ process
     {
       $FileList = $DestPkg | Where-Object name -like "*$Role*"
     }
-    
-
+    if ($ReverseForwarders)
+    {
+      $Filelist += $DestPkg | Where-Object name -like '*ReverseForwarders*'
+    }
     if ($GuestDrivers)
     {
       $Filelist += $DestPkg |  Where-Object name -like '*Guest*' 
